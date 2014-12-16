@@ -4,9 +4,4 @@ RSpec::Core::RakeTask.new(:spec)
 require 'rubocop/rake_task'
 RuboCop::RakeTask.new
 
-task default: [:coveralls, :spec, :rubocop]
-
-task :coveralls do
-  require 'coveralls'
-  Coveralls.wear!
-end
+task default: [:spec, :rubocop]

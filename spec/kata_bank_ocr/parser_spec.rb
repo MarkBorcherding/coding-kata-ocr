@@ -1,3 +1,4 @@
+require 'spec_helper'
 require_relative '../../lib/kata_bank_ocr/parser'
 module KataBankOcr
   describe Parser do
