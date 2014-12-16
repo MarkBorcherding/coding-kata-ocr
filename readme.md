@@ -1,7 +1,7 @@
 # Bank OCR
 
 [![Build Status](https://travis-ci.org/MarkBorcherding/coding-kata-ocr.svg?branch=master)](https://travis-ci.org/MarkBorcherding/coding-kata-ocr)
-[![Coverage Status](https://coveralls.io/repos/MarkBorcherding/coding-kata-ocr/badge.png)](https://coveralls.io/r/MarkBorcherding/coding-kata-ocr)
+[![Coverage Status](https://coveralls.io/repos/MarkBorcherding/coding-kata-ocr/badge.png?branch=master)](https://coveralls.io/r/MarkBorcherding/coding-kata-ocr?branch=master)
 
 [View original kata](http://codingdojo.org/cgi-bin/index.pl?KataBankOCR)
 
