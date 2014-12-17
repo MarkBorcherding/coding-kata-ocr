@@ -18,11 +18,11 @@ module KataBankOcr
 34
 EOF
 
-        expect(KataBankOcr::Parser.lines(file)).to eq [
-          %w( 11 12 13 14 ),
-          %w( 21 22 23 24 ),
-          %w( 31 32 33 34 )
-        ]
+        expect(KataBankOcr::Parser.lines(file)).to eq %W(
+          11\n12\n13
+          21\n22\n23
+          31\n32\n33
+        )
       end
     end
 
