@@ -44,6 +44,12 @@ EOF
           expect(Parser.digits(line)).to all(satisfy { |x| x.length == 3 })
         end
 
+        it 'groups the each digits characters' do
+          digits = Parser.digits(line)
+          (1..9).each do |index|
+            expect(digits[index - 1].flatten).to all eq("#{index}")
+          end
+        end
       end
     end
 
