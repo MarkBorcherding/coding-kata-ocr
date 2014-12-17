@@ -54,7 +54,7 @@ EOF
     end
 
     describe '#digit_to_char' do
-      shared_examples_for "a parsed digit" do |char, digit|
+      shared_examples_for 'a parsed digit' do |char, digit|
         it "parses the digit #{char}" do
           expect(Parser.digit_to_char(digit)).to eq(char)
         end
@@ -63,7 +63,10 @@ EOF
       it_behaves_like 'a parsed digit', '0', [[' _ '],
                                               ['| |'],
                                               ['|_|']]
-      it 'parses the digit 1'
+
+      it_behaves_like 'a parsed digit', '1', [['   '],
+                                              ['  |'],
+                                              ['  |']]
       it 'parses the digit 2'
       it 'parses the digit 3'
       it 'parses the digit 4'

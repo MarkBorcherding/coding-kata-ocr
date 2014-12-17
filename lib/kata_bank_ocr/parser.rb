@@ -47,8 +47,11 @@ module KataBankOcr
     #
     # Turn a digit into a character representation
     #
-    def self.digit_to_char(_)
-      '0'
+    def self.digit_to_char(digit)
+      {
+        ' _ | ||_|' => '0',
+        '     |  |' => '1'
+      }[digit.flatten.join('')]
     end
   end
 end
