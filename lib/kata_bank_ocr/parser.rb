@@ -6,12 +6,14 @@ module KataBankOcr
     #
     # Assumptions:
     #  * Lines will only appear in groups of 4
+    #  * There is no use in keeping the line of empty spaces
     def self.lines(string_of_lines)
-      l = []
       string_of_lines
+        .to_s
         .split("\n")
-        .each_slice(4) { |a| l << a[0..-2].join("\n") }
-      l
+        .each_slice(4)
+        .map { |l| l[0..-2] }
+        .map { |l| l.join("\n") }
     end
 
     #
