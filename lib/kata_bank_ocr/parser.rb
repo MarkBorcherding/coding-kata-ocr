@@ -43,5 +43,12 @@ module KataBankOcr
         [t, middle.next, bottom.next]
       end
     end
+
+    #
+    # Turn a digit into a character representation
+    #
+    def self.digit_to_char(_)
+      '0'
+    end
   end
 end

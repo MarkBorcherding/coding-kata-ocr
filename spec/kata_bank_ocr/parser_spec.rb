@@ -53,14 +53,25 @@ EOF
       end
     end
 
-    describe 'parsing 1'
-    describe 'parsing 2'
-    describe 'parsing 3'
-    describe 'parsing 4'
-    describe 'parsing 5'
-    describe 'parsing 6'
-    describe 'parsing 7'
-    describe 'parsing 8'
-    describe 'parsing 9'
+    describe '#digit_to_char' do
+      shared_examples_for "a parsed digit" do |char, digit|
+        it "parses the digit #{char}" do
+          expect(Parser.digit_to_char(digit)).to eq(char)
+        end
+      end
+
+      it_behaves_like 'a parsed digit', '0', [[' _ '],
+                                              ['| |'],
+                                              ['|_|']]
+      it 'parses the digit 1'
+      it 'parses the digit 2'
+      it 'parses the digit 3'
+      it 'parses the digit 4'
+      it 'parses the digit 5'
+      it 'parses the digit 6'
+      it 'parses the digit 7'
+      it 'parses the digit 8'
+      it 'parses the digit 9'
+    end
   end
 end
