@@ -28,12 +28,15 @@ EOF
 
     describe 'parsing a line into digits' do
       describe '#digits' do
-        it 'divides a line into 9 digits' do
-          line = <<-EOF
+        let(:line) do
+          <<-EOF
 111222333444555666777888999
 111222333444555666777888999
 111222333444555666777888999
 EOF
+        end
+
+        it 'divides a line into 9 digits' do
           expect(Parser.digits(line).count).to eq(9)
         end
       end
