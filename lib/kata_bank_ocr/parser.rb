@@ -50,7 +50,8 @@ module KataBankOcr
     def self.digit_to_char(digit)
       {
         ' _ | ||_|' => '0',
-        '     |  |' => '1'
+        '     |  |' => '1',
+        ' _  _||_ ' => '2'
       }[digit.flatten.join('')]
     end
   end

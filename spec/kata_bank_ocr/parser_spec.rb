@@ -67,7 +67,10 @@ EOF
       it_behaves_like 'a parsed digit', '1', [['   '],
                                               ['  |'],
                                               ['  |']]
-      it 'parses the digit 2'
+
+      it_behaves_like 'a parsed digit', '2', [[' _ '],
+                                              [' _|'],
+                                              ['|_ ']]
       it 'parses the digit 3'
       it 'parses the digit 4'
       it 'parses the digit 5'
