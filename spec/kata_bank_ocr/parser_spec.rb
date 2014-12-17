@@ -39,6 +39,11 @@ EOF
         it 'divides a line into 9 digits' do
           expect(Parser.digits(line).count).to eq(9)
         end
+
+        it 'groups the top, middle and bottom into the digit' do
+          expect(Parser.digits(line)).to all(satisfy { |x| x.length == 3 })
+        end
+
       end
     end
 
