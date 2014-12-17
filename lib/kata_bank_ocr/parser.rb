@@ -1,17 +1,17 @@
 module KataBankOcr
   # The class to parse an input file.
   class Parser
-    #
     # Group the lines of the file into logical lines
     #
-    # Returns:
-    #  An array of strings - Each string being having three
-    #                        separate lines of the un-OCR'd
-    #                        account number.
+    # @param string_of_lines [String] A string containins several lines of
+    #                                 un-OCR'd account numbers. These lines
+    #                                 are always in multiples of 4, with the
+    #                                 last line being completely empty, and
+    #                                 also needed only to delimiate the lines.
     #
-    # Assumptions:
-    #  * Lines will only appear in groups of 4
-    #  * There is no use in keeping the line of empty spaces
+    # @return [Array<String>] An array of strings. Each string being having
+    #                         three separate lines of the un-OCR'd account
+    #                         number.
     def self.lines(string_of_lines)
       string_of_lines
         .to_s
@@ -21,17 +21,18 @@ module KataBankOcr
         .map { |l| l.join("\n") }
     end
 
-    #
     # Parse a line into the appropriate digits
     #
-    # Returns:
-    # An Array of digits - Each member of the array is an
-    #                      array of the top, middle and bottom
-    #                      line of the un-OCR'd account number.
+    # @param [String] line A string containing the un-OCR'd digit, including
+    #                      new line characters. The line should have three
+    #                      lines of characters. Each of the lines should be in
+    #                      multiples of 3, since each digit is expected to be
+    #                      3 characters.
     #
-    # Assumptions
-    # * line will be a string with 3 lines separated by \n
-    # * each line will contain 3 * n characters
+    # @return [Array<Array<String>>] An Array of digits. Each member of the
+    #                                array is an array of the top, middle
+    #                                and bottom line of the un-OCR'd account
+    #                                number.
     def self.digits(line)
       top,
       middle,
@@ -46,11 +47,12 @@ module KataBankOcr
     # Turn a digit into a character representation
     #
     # Parameters:
-    # * +digit+ - An array containing arrays of the top, bottom,
-    #             and middle characters of the digit.
+    # @param [Array<Array<String>>] digit An array containing arrays of the
+    #                                     top, bottom, and middle characters
+    #                                     of the digit.
     #
-    # Returns:
-    # A string containing a one character representation of the digit.
+    # @return [String] A string containing a one character representation of
+    #                  the digit.
     #
     def self.digit_to_char(digit)
       {
