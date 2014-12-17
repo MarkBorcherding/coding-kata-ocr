@@ -4,6 +4,11 @@ module KataBankOcr
     #
     # Group the lines of the file into logical lines
     #
+    # Returns:
+    #  An array of strings - Each string being having three
+    #                        separate lines of the un-OCR'd
+    #                        account number.
+    #
     # Assumptions:
     #  * Lines will only appear in groups of 4
     #  * There is no use in keeping the line of empty spaces
@@ -18,6 +23,11 @@ module KataBankOcr
 
     #
     # Parse a line into the appropriate digits
+    #
+    # Returns:
+    # An Array of digits - Each member of the array is an
+    #                      array of the top, middle and bottom
+    #                      line of the un-OCR'd account number.
     #
     # Assumptions
     # * line will be a string with 3 lines separated by \n
