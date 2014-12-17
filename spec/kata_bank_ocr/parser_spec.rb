@@ -18,7 +18,7 @@ module KataBankOcr
 34
 EOF
 
-        expect(KataBankOcr::Parser.lines(file)).to eq %W(
+        expect(Parser.lines(file)).to eq %W(
           11\n12\n13
           21\n22\n23
           31\n32\n33
@@ -26,7 +26,19 @@ EOF
       end
     end
 
-    describe 'parsing a line into 9 digits'
+    describe 'parsing a line into digits' do
+      describe '#digits' do
+        it 'divides a line into 9 digits' do
+          line = <<-EOF
+111222333444555666777888999
+111222333444555666777888999
+111222333444555666777888999
+EOF
+          expect(Parser.digits(line).count).to eq(9)
+        end
+      end
+    end
+
     describe 'parsing 1'
     describe 'parsing 2'
     describe 'parsing 3'
