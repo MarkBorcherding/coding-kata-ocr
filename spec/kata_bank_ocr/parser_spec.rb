@@ -1,7 +1,6 @@
-require 'spec_helper'
 require_relative '../../lib/kata_bank_ocr/parser'
 module KataBankOcr
-  describe Parser do
+  RSpec.describe Parser do
     describe '#lines' do
       it 'groups 4 lines of the file into one logical line' do
         file = <<-EOF
@@ -26,6 +25,7 @@ EOF
         ]
       end
     end
+
     describe 'parsing a line into 9 digits'
     describe 'parsing 1'
     describe 'parsing 2'
