@@ -21,14 +21,15 @@ module KataBankOcr
     # * line will be a string with 3 lines separated by \n
     # * each line will contain 3 * n characters
     def self.digits(line)
-      top, middle, bottom = *line.split("\n").map(&:chars)
-      digits = []
-      middle = middle.each_slice(3)
-      bottom = bottom.each_slice(3)
-      top.each_slice(3) do |t|
-        digits << [t, middle.next, bottom.next]
+      top,
+      middle,
+      bottom = *line.split("\n")
+                .map(&:chars)
+                .map { |l| l.each_slice(3) }
+
+      top.map do |t|
+        [t, middle.next, bottom.next]
       end
-      digits
     end
   end
 end
