@@ -39,9 +39,7 @@ module KataBankOcr
                 .map(&:chars)
                 .map { |l| l.each_slice(3) }
 
-      top.map do |t|
-        [t, middle.next, bottom.next]
-      end
+      top.zip middle, bottom
     end
 
     #
