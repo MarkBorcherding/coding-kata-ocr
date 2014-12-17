@@ -45,6 +45,13 @@ module KataBankOcr
     #
     # Turn a digit into a character representation
     #
+    # Parameters:
+    # * +digit+ - An array containing arrays of the top, bottom,
+    #             and middle characters of the digit.
+    #
+    # Returns:
+    # A string containing a one character representation of the digit.
+    #
     def self.digit_to_char(digit)
       {
         ' _ | ||_|' => '0',
