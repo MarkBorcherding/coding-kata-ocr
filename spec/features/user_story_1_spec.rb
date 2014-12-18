@@ -12,34 +12,29 @@ RSpec.describe 'User Story 1' do
  _  _  _  _  _  _  _  _  _
 | || || || || || || || || |
 |_||_||_||_||_||_||_||_||_|
-
 EOF
 
   it_behaves_like 'a parsed account number', '111111111', <<-EOF
   |  |  |  |  |  |  |  |  |
   |  |  |  |  |  |  |  |  |
-
 EOF
 
   it_behaves_like 'a parsed account number', '222222222', <<-EOF
  _  _  _  _  _  _  _  _  _
  _| _| _| _| _| _| _| _| _|
 |_ |_ |_ |_ |_ |_ |_ |_ |_
-
 EOF
 
   it_behaves_like 'a parsed account number', '333333333', <<-EOF
  _  _  _  _  _  _  _  _  _
  _| _| _| _| _| _| _| _| _|
  _| _| _| _| _| _| _| _| _|
-
 EOF
 
   it_behaves_like 'a parsed account number', '444444444', <<-EOF
 
 |_||_||_||_||_||_||_||_||_|
   |  |  |  |  |  |  |  |  |
-
 EOF
 
   it_behaves_like 'a parsed account number', '555555555', <<-EOF

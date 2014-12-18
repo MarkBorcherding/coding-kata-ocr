@@ -15,7 +15,7 @@ module KataBankOcr
     def self.lines(string_of_lines)
       string_of_lines
         .to_s
-        .split("\n")
+        .split("\n", -1)
         .each_slice(4)
         .map { |l| l[0..-2] }
         .map { |l| l.join("\n") }
