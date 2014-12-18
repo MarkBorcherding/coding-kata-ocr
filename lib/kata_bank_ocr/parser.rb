@@ -58,7 +58,8 @@ module KataBankOcr
       {
         ' _ | ||_|' => '0',
         '     |  |' => '1',
-        ' _  _||_ ' => '2'
+        ' _  _||_ ' => '2',
+        ' _  _| _|' => '3'
       }[digit.flatten.join('')]
     end
   end
