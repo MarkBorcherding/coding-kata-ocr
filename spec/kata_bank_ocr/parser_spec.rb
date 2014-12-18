@@ -75,12 +75,30 @@ EOF
       it_behaves_like 'a parsed digit', '3', ' _ ',
                                              ' _|',
                                              ' _|'
-      it 'parses the digit 4'
-      it 'parses the digit 5'
-      it 'parses the digit 6'
-      it 'parses the digit 7'
-      it 'parses the digit 8'
-      it 'parses the digit 9'
+
+      it_behaves_like 'a parsed digit', '4', '   ',
+                                             '|_|',
+                                             '  |'
+
+      it_behaves_like 'a parsed digit', '5', ' _ ',
+                                             '|_ ',
+                                             ' _|'
+
+      it_behaves_like 'a parsed digit', '6', ' _ ',
+                                             '|_ ',
+                                             '|_|'
+
+      it_behaves_like 'a parsed digit', '7', ' _ ',
+                                             '  |',
+                                             '  |'
+
+      it_behaves_like 'a parsed digit', '8', ' _ ',
+                                             '|_|',
+                                             '|_|'
+
+      it_behaves_like 'a parsed digit', '9', ' _ ',
+                                             '|_|',
+                                             ' _|'
     end
   end
 end
