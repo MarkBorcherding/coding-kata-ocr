@@ -21,6 +21,19 @@ module KataBankOcr
         .map { |l| l.join("\n") }
     end
 
+    # Parse lines and turn them into account numbers
+    #
+    # @param [String] all_lines A string containing all the lines to parsed
+    #
+    # @return [Enumerable<String>] An enumerator of accounts numbers
+    def self.parse(all_lines)
+      lines(all_lines).map do |l|
+        digits(l)
+          .map(&method(:digit_to_char))
+          .join ''
+      end
+    end
+
     # Parse a line into the appropriate digits
     #
     # @param [String] line A string containing the un-OCR'd digit, including
