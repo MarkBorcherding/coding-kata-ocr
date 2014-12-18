@@ -1,3 +1,13 @@
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
+
+
+Style/AlignParameters:
+  Exclude:
+    - 'spec/kata_bank_ocr/parser_spec.rb'
+
+Metrics/MethodLength:
+  Max: 14
+  Exclude:
+    - 'lib/kata_bank_ocr/parser.rb'

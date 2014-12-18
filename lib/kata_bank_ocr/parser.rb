@@ -56,11 +56,27 @@ module KataBankOcr
     #
     def self.digit_to_char(digit)
       {
-        ' _ | ||_|' => '0',
-        '     |  |' => '1',
-        ' _  _||_ ' => '2',
-        ' _  _| _|' => '3'
-      }[digit.flatten.join('')]
+        flatten(' _ ',
+                '| |',
+                '|_|') => '0',
+
+        flatten('   ',
+                '  |',
+                '  |') => '1',
+
+        flatten(' _ ',
+                ' _|',
+                '|_ ') => '2',
+
+        flatten(' _ ',
+                ' _|',
+                ' _|') => '3'
+      }[flatten(*digit)]
     end
+
+    def self.flatten(*lines)
+      lines.flatten.join('')
+    end
+    private_class_method :flatten
   end
 end
