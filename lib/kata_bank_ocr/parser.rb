@@ -1,6 +1,6 @@
 module KataBankOcr
   # The class to parse an input file.
-  class Parser
+  module Parser
     # Group the lines of the file into logical lines
     #
     # @param [String] string_of_lines A string containins several lines of
