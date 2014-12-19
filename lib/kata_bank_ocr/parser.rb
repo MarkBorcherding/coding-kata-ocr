@@ -3,13 +3,13 @@ module KataBankOcr
   class Parser
     # Group the lines of the file into logical lines
     #
-    # @param string_of_lines [String] A string containins several lines of
+    # @param [String] string_of_lines A string containins several lines of
     #                                 un-OCR'd account numbers. These lines
     #                                 are always in multiples of 4, with the
     #                                 last line being completely empty, and
     #                                 also needed only to delimiate the lines.
     #
-    # @return [Array<String>] An array of strings. Each string being having
+    # @return [Array[String>] An array of strings. Each string being having
     #                         three separate lines of the un-OCR'd account
     #                         number.
     def self.lines(string_of_lines)
@@ -21,11 +21,21 @@ module KataBankOcr
         .map { |l| l.join("\n") }
     end
 
+    # Parse a file and turn it into account numbers
+    #
+    # @param [String] filename The name of the file to parse into account
+    #                          numbers
+    #
+    # @return [Enumerable<String>] An enumerator of account numbers
+    def self.parse_file(filename)
+      parse File.read(filename)
+    end
+
     # Parse lines and turn them into account numbers
     #
     # @param [String] all_lines A string containing all the lines to parsed
     #
-    # @return [Enumerable<String>] An enumerator of accounts numbers
+    # @return [Enumerable<String>] An enumerator of account numbers
     def self.parse(all_lines)
       lines(all_lines)
         .map(&method(:parse_line))

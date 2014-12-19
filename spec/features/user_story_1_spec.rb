@@ -7,7 +7,16 @@ RSpec.shared_examples_for 'a parsed account number' do |account_number, *line|
   end
 end
 
+RSpec.shared_examples_for 'a parsed file' do |account_number|
+  it "parses a file #{account_number}" do
+    file = File.join File.dirname(__FILE__), 'fixtures', "#{account_number}.txt"
+    expect(KataBankOcr::Parser.parse_file file).to match_array([account_number])
+  end
+end
+
 RSpec.describe 'User Story 1' do
+  it_behaves_like 'a parsed file', '000000000'
+
   it_behaves_like 'a parsed account number', '000000000',
                   ' _  _  _  _  _  _  _  _  _ ',
                   '| || || || || || || || || |',
