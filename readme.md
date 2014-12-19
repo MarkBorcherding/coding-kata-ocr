@@ -9,6 +9,20 @@
 
 Your manager has recently purchased a machine that assists in reading letters and faxes sent in by branch offices. The machine scans the paper documents, and produces a file with a number of entries. You will write a program to parse this file.
 
+## Installation
+
+Install the dependencies.
+
+    bundle install
+
+## Parse the Account Numbers
+
+Run the `bin/ocr-it` command to execute the program.
+
+Example:
+
+    bin/ocr-it spec/features/fixtures/00000000.txt
+
 ## Specification
 
 ### User Story 1
@@ -221,20 +235,3 @@ Invalid:
 
 => 490867715
 ```
-
-## Installation
-
-Install the dependencies.
-
-    bundle install
-
-## Parse the Account Numbers
-
-Run the `bin/ocr-it` command to execute the program.
-
-Example:
-
-    bin/ocr-it spec/features/fixtures/00000000.txt
-
-
-
