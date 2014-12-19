@@ -88,7 +88,7 @@ module KataBankOcr
     #                  the digit.
     #
     def self.digit_to_char(digit)
-      {
+      digits = {
         flatten(' _ ',
                 '| |',
                 '|_|') => '0',
@@ -129,7 +129,9 @@ module KataBankOcr
                 '|_|',
                 ' _|') => '9'
 
-      }[flatten(*digit)]
+      }
+      digits.default = '?'
+      digits[flatten(*digit)]
     end
 
     def self.flatten(*lines)

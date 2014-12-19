@@ -97,6 +97,12 @@ EOF
       it_behaves_like 'a parsed digit', '9', ' _ ',
                                              '|_|',
                                              ' _|'
+
+      context 'when something is not a known number' do
+        it_behaves_like 'a parsed digit', '?', ' _ ',
+                                               '| |',
+                                               ' _|'
+      end
     end
   end
 end
