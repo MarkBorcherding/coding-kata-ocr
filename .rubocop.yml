@@ -11,3 +11,6 @@ Metrics/MethodLength:
   Max: 14
   Exclude:
     - 'lib/kata_bank_ocr/parser.rb'
+
+Style/FileName:
+    Enabled: false

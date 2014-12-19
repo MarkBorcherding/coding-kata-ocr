@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/kata_bank_ocr'
+
+def fail_usage(message)
+  puts 'Error in usage'
+  puts message if message
+  puts 'Usage: ocr-it <filename>'
+  exit 1
+end
+
+filename = ARGV[0]
+
+fail_usage unless filename
+fail_usage("File #{filename} does not exist") unless File.exist?(filename)
+
+KataBankOcr::Parser.parse_file(filename).each do |account_number|
+  puts account_number
+end
