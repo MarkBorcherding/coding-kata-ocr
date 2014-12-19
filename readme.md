@@ -221,3 +221,20 @@ Invalid:
 
 => 490867715
 ```
+
+## Installation
+
+Install the dependencies.
+
+    bundle install
+
+## Parse the Account Numbers
+
+Run the `bin/ocr-it` command to execute the program.
+
+Example:
+
+    bin/ocr-it spec/features/fixtures/00000000.txt
+
+
+
