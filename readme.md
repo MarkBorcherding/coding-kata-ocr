@@ -25,6 +25,10 @@ Example:
 
     bin/ocr-it spec/features/fixtures/00000000.txt
 
+## Example Files
+
+Look in `spec/features/fixtures` for test files to run the program.
+
 ## Specification
 
 ### User Story 1
