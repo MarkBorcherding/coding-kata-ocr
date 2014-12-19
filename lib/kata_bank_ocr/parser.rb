@@ -74,8 +74,10 @@ module KataBankOcr
       top.zip middle, bottom
     end
 
-    #
     # Turn a digit into a character representation
+    #
+    # This method is open for some memoization, but skipping for now do to
+    # time constraints.
     #
     # Parameters:
     # @param [Array<Array<String>>] digit An array containing arrays of the
