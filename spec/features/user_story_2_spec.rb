@@ -4,7 +4,8 @@ RSpec.describe 'User Story 1' do
   context 'checking an account number checksum' do
     %w( 711111111
         123456789
-        490867715).each do |valid|
+        490867715
+        000000051).each do |valid|
       it "affirms #{valid} is a valid account number" do
         expect(KataBankOcr::Checksum.valid?(valid)).to eq(true)
       end

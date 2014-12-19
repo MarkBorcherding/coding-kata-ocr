@@ -11,7 +11,9 @@ Your manager has recently purchased a machine that assists in reading letters an
 
 ## Installation
 
-Install the dependencies.
+There are no dependencies to run the program.
+
+Install the development dependencies.
 
     bundle install
 

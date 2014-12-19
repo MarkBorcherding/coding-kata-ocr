@@ -17,7 +17,7 @@ fail_usage("File #{filename} does not exist") unless File.exist?(filename)
 KataBankOcr::Parser.parse_file(filename).each do |account_number|
   legible = account_number =~ /^\d{9}$/
   print account_number
-  print ' ERR' if legible && KataBankOcr::Checksum.valid?(account_number)
+  print ' ERR' if legible && !KataBankOcr::Checksum.valid?(account_number)
   print ' ILL' unless legible
   print "\n"
 end
