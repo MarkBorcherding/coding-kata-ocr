@@ -9,7 +9,7 @@ module KataBankOcr
     #                                 last line being completely empty, and
     #                                 also needed only to delimiate the lines.
     #
-    # @return [Array[String>] An array of strings. Each string being having
+    # @return [Enumerable<String>] An array of strings. Each string being having
     #                         three separate lines of the un-OCR'd account
     #                         number.
     def self.lines(string_of_lines)
@@ -60,10 +60,10 @@ module KataBankOcr
     #                      multiples of 3, since each digit is expected to be
     #                      3 characters.
     #
-    # @return [Array<Array<String>>] An Array of digits. Each member of the
-    #                                array is an array of the top, middle
-    #                                and bottom line of the un-OCR'd account
-    #                                number.
+    # @return [Enumerable<Enumerable<String>>] An Enumerable of digits. Each
+    #                                member of the array is an array of the
+    #                                top, middle and bottom line of the
+    #                                un-OCR'd account number.
     def self.digits(line)
       top,
       middle,
@@ -79,10 +79,10 @@ module KataBankOcr
     # This method is open for some memoization, but skipping for now do to
     # time constraints.
     #
-    # Parameters:
-    # @param [Array<Array<String>>] digit An array containing arrays of the
-    #                                     top, bottom, and middle characters
-    #                                     of the digit.
+    # @param [Enumerable<Enumerable<String>>] digit An array containing arrays
+    #                                               of the top, bottom, and
+    #                                               middle characters of the
+    #                                               digit.
     #
     # @return [String] A string containing a one character representation of
     #                  the digit.
@@ -135,7 +135,9 @@ module KataBankOcr
     end
 
     def self.flatten(*lines)
-      lines.flatten.join('')
+      lines
+        .flatten
+        .join('')
     end
     private_class_method :flatten
   end
