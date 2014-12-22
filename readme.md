@@ -19,7 +19,8 @@ Install the development dependencies.
 
 ## Parse the Account Numbers
 
-Run the `bin/ocr-it` command to execute the program.
+Run the `bin/ocr-it` command with a filename to executre the program.
+
 
 Example:
 
