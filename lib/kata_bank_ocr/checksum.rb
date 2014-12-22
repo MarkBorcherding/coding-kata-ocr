@@ -1,5 +1,5 @@
 module KataBankOcr
-  # The class to  an input file.
+  # Run checksum validation on an account number
   module Checksum
     # Check the checksum of the account number
     #
