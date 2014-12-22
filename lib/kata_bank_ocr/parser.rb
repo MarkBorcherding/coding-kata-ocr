@@ -76,7 +76,7 @@ module KataBankOcr
 
     # Turn a digit into a character representation
     #
-    # This method is open for some memoization, but skipping for now do to
+    # This method is open for some memoization, but skipping for now due to
     # time constraints.
     #
     # @param [Enumerable<Enumerable<String>>] digit An array containing arrays
