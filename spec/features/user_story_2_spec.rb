@@ -1,6 +1,6 @@
 require_relative '../../lib/kata_bank_ocr/checksum'
 
-RSpec.describe 'User Story 1' do
+RSpec.describe 'User Story 2' do
   context 'checking an account number checksum' do
     %w( 711111111
         123456789
