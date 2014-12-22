@@ -1,6 +1,15 @@
 require_relative '../../lib/kata_bank_ocr/parser'
 module KataBankOcr
   RSpec.describe Parser do
+    describe 'legible?' do
+      it 'returns true if the account number is 9 digits' do
+        expect(Parser.legible?('123456789')).to be_truthy
+      end
+      it 'returns false if the account number is not 9 digits' do
+        expect(Parser.legible?('12345678?')).to be_falsy
+      end
+    end
+
     describe '#lines' do
       it 'groups 4 lines of the file into one logical line' do
         file = %w( 11

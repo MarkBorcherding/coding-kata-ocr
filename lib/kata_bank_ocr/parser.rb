@@ -134,6 +134,14 @@ module KataBankOcr
       digits[flatten(*digit)]
     end
 
+    # Determines if an account number was completely read
+    #
+    # @param [String] account_number The account number to test
+    # @return Truthy if the account number if completely read.
+    def self.legible?(account_number)
+      /^\d{9}$/ =~ account_number
+    end
+
     def self.flatten(*lines)
       lines
         .flatten
