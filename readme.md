@@ -1,6 +1,7 @@
 # Bank OCR
 
 [![Build Status](https://travis-ci.org/MarkBorcherding/coding-kata-ocr.svg?branch=master)](https://travis-ci.org/MarkBorcherding/coding-kata-ocr)
+[![Code Climate](https://codeclimate.com/github/MarkBorcherding/coding-kata-ocr/badges/gpa.svg)](https://codeclimate.com/github/MarkBorcherding/coding-kata-ocr)
 [![Coverage Status](https://coveralls.io/repos/MarkBorcherding/coding-kata-ocr/badge.png?branch=master)](https://coveralls.io/r/MarkBorcherding/coding-kata-ocr?branch=master)
 [![Inline docs](http://inch-ci.org/github/MarkBorcherding/coding-kata-ocr.svg?branch=master)](http://inch-ci.org/github/MarkBorcherding/coding-kata-ocr)
 [![Dependency Status](https://gemnasium.com/MarkBorcherding/coding-kata-ocr.svg)](https://gemnasium.com/MarkBorcherding/coding-kata-ocr)
